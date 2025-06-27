@@ -1,0 +1,58 @@
+1.
+<< in
+register_stock 1
+register_stock 2
+place_sell_order 1 10 100
+place_buy_order 1 10 100
+place_sell_order 2 20 200
+print_all_stocks
+
+>> out
+[(1, 100), (2, 0)]
+
+2.
+<< in
+register_stock 1
+place_buy_order 1 10 100
+place_buy_order 1 10 110
+place_sell_order 1 5 100
+print_all_stocks
+
+>> out
+[(1, 110)]
+
+3.
+<< in
+register_stock 1
+place_buy_order 1 10 100
+place_buy_order 1 10 110
+place_sell_order 1 15 100
+print_all_stocks
+
+>> out
+[(1, 100)]
+
+4.
+<< in
+register_stock 1
+register_stock 2
+place_buy_order 1 10 100
+place_buy_order 2 20 200
+place_sell_order 1 5 110
+place_sell_order 2 10 190
+print_all_stocks
+
+>> out
+[(2, 200), (1, 0)]
+
+5.
+<< in
+register_stock 1
+place_buy_order 1 10 100
+place_buy_order 1 10 90
+place_buy_order 1 10 110
+place_sell_order 1 15 100
+print_all_stocks
+
+>> out
+[(1, 100)]
