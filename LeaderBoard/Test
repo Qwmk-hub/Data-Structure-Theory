@@ -1,0 +1,96 @@
+1.
+<< in
+add_score 1 100
+get_rank 1
+add_score 1 120
+get_rank 1
+add_score 2 100
+get_rank 1
+get_rank 2
+get_score_by_rank 1
+
+>> out
+1
+1
+1
+1
+2
+1
+2
+120
+
+2.
+<< in
+add_score 1 100
+add_score 2 200
+add_score 3 150
+add_score 1 250
+get_rank 1
+get_rank 2
+get_rank 3
+get_score_by_rank 1
+get_score_by_rank 2
+get_score_by_rank 3
+get_score_by_rank 4
+get_score_by_rank 0
+
+>> out
+1
+1
+2
+1
+1
+2
+3
+250
+200
+150
+-1
+-1
+
+3.
+<< in
+add_score 1 100
+get_rank 1
+add_score 2 100
+get_rank 1
+get_rank 2
+add_score 1 90
+add_score 3 90
+get_score_by_rank 3
+
+>> out
+1
+1
+1
+1
+1
+1
+3
+90
+
+4.
+<< in
+add_score 1 300
+add_score 2 200
+add_score 3 200
+add_score 4 150
+get_rank 1
+get_rank 2
+get_rank 3
+get_rank 4
+get_score_by_rank 2
+get_score_by_rank 3
+get_score_by_rank 4
+>> out
+1
+2
+2
+4
+1
+2
+2
+4
+200
+200
+150
