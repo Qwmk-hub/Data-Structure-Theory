@@ -1,0 +1,44 @@
+1.
+<< in
+add_product 1001 1 100
+add_product 1002 2 200
+add_product 1003 3 300
+sell_product 1200
+sell_product 1300
+add_product 1404 4 400
+get_inventory 1500
+add_product 1505 5 500
+get_inventory 1600
+
+>> out
+3
+-1
+[4]
+[5, 4]
+
+2.
+<< in
+get_inventory 1000
+add_product 1001 1 100
+sell_product 1101
+add_product 1102 2 200
+add_product 1103 3 300
+get_inventory 1200
+sell_product 1201
+sell_product 1202
+add_product 1204 4 400
+add_product 1205 5 500
+get_inventory 1300
+sell_product 1301
+get_inventory 2000
+add_product 2001 6 600
+
+>> out
+[]
+-1
+[3, 2]
+3
+2
+[5, 4]
+5
+[]
