@@ -1,0 +1,81 @@
+Design a real-time stock trading system that accommodates the buying and selling of stocks. 
+The system should support high-volume transactions efficiently, ensuring that buy and sell orders are matched optimally.
+
+Each stock in the system possesses the following properties:
+
+stock_id: An integer representing the unique identifier for the stock.
+
+price: An integer representing the current price of the stock.
+
+Implement the StockTradingSystem class with the following methods:
+
+register_stock(stock_id): Adds a stock with the specified stock_id to the system. 
+This method is called once for each stock at the system's initiation. The initial price of the stock is 0.
+
+place_buy_order(stock_id, quantity, max_price): Places a buy order, 
+attempting to buy a specified quantity of a stock at a price not exceeding max_price. 
+The system should match the order with the lowest available sell orders. Orders that cannot be matched immediately are placed in a queue until they can be matched with future orders.
+
+place_sell_order(stock_id, quantity, min_price): Places a sell order, attempting to sell a specified quantity 
+of a stock at a price not below than min_price. The system should match the order with the highest available buy orders. 
+Orders that cannot be matched immediately are placed in a queue until they can be matched with future orders.
+
+print_all_stocks(): Prints all the stocks in the system, along with their current transaction prices. 
+The transaction price is the price at which the most recent buy and sell orders were matched. 
+The stocks should be ordered from the highest to the lowest transaction price.
+
+Constraints:
+
+1 <= number of stocks <= 10^2
+
+1 <= stock_id, price, quantity, max_price, min_price <= 10^5
+
+price, quantity, maxPrice, and minPrice are integers.
+
+The total number of operations will not exceed 10^7.
+
+실시간으로 주식의 매수 및 매도를 처리할 수 있는 주식 거래 시스템을 설계하세요. 
+이 시스템은 고빈도도 거래를 효율적으로 처리해야 하며, 매수 및 매도 주문이 최적으로 매칭되도록 해야 합니다.
+
+시스템 내의 각 주식은 다음과 같은 속성을 가집니다:
+
+stock_id: 해당 주식의 고유 식별자를 나타내는 정수
+price: 주식의 현재 가격을 나타내는 정수
+StockTradingSystem 클래스를 구현하세요:
+
+register_stock(stock_id): 주어진 stock_id를 가진 주식을 시스템에 등록합니다. 
+이 메서드는 시스템 초기화 시 각 주식마다 한 번 호출되며, 초기 가격은 0입니다.
+
+place_buy_order(stock_id, quantity, max_price): 지정된 stock_id의 주식을 max_price 이하의 가격으로 quantity만큼 매수하려는 주문을 등록합니다. 
+시스템은 가능한 한 낮은 가격의 매도 주문과 매칭을 시도해야 하며, 즉시 매칭되지 않는 주문은 대기열에 보관되어 이후 주문과 매칭을 시도합니다.
+
+place_sell_order(stock_id, quantity, min_price): 지정된 stock_id의 주식을 min_price 이상의 가격으로 quantity만큼 매도하려는 주문을 등록합니다. 
+시스템은 가능한 한 높은 가격의 매수 주문과 매칭을 시도해야 하며, 즉시 매칭되지 않는 주문은 대기열에 보관되어 이후 주문과 매칭을 시도합니다.
+
+print_all_stocks(): 시스템에 등록된 모든 주식의 현재 시장 가격을 출력합니다. 시장 가격은 가장 최근에 체결된 매수 및 매도 주문의 가격을 의미합니다. 
+출력 시 시장 가격이 높은 순서대로 정렬되어야 합니다.
+
+제약 사항:
+
+1 <= 주식 수 <= 10^2
+1 <= stock_id, price, quantity, max_price, min_price <= 10^5
+price, quantity, max_price, min_price는 정수
+총 주문 횟수는 10^7회를 넘지 않음
+Input specification
+
+The names of the functions and their respective parameters will be provided in the order they are called.
+
+Functions will be separated by a newline, and the parameters of the functions will be separated by whitespace.
+
+각 함수 호출은 호출 순서대로 주어지며, 함수명과 파라미터는 공백으로 구분됩니다. 함수 호출은 개행 문자로 구분됩니다.
+
+Output specification
+
+The only output will be from the result of the print_all_stocks() function, which returns a list of tuples. 
+Each tuple contains a stock_id and its corresponding current transaction price.
+
+Print format: [(stock_id1, transaction_price1), (stock_id2, transaction_price2), ...]
+
+출력은 오직 print_all_stocks() 함수의 결과로만 발생합니다. 출력 형식은 각 주식의 stock_id와 해당 주식의 현재 시장 가격을 포함하는 튜플의 리스트입니다.
+
+출력 예시: [(stock_id1, transaction_price1), (stock_id2, transaction_price2), ...]
