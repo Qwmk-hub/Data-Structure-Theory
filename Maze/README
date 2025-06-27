@@ -1,0 +1,47 @@
+You find yourself in a perplexing maze, a 2D grid of strings stretching out before you. 
+Each string represents either a 1 (a wall) or a 0 (an open path). The maze is a perfect square, and all outer edges are blocked, 
+leaving you trapped within.
+
+You must find a path from the starting point A, located at the top edge of the maze, to the destination point B, 
+situated at the bottom edge.
+
+The Rules of Engagement
+
+Movement: You can move up, down, left, or right, but never diagonally. You can only move one step at a time.
+
+Boundaries: The outer edges of the maze are impenetrable walls.
+
+Starting and Ending Points: Your journey begins at A on the top edge and ends at B on the bottom edge.
+
+Your Objective: Find the shortest path from A to B and return its length.
+
+Constraints:
+
+10 <= n == height == width <= 10^3
+당신은 혼란스러운 미로 속에 갇혔습니다. 이 미로는 2차원 문자열 그리드로 구성되어 있으며, 각 칸은 1(벽) 또는 0(빈 경로)을 나타냅니다. 
+이 미로는 정사각형 형태이며, 바깥쪽 가장자리는 모두 벽으로 막혀 있어 외부로 나갈 수 없습니다.
+
+당신은 미로의 위쪽 경계에 위치한 시작 지점 A에서 출발하여, 아래쪽 경계에 있는 도착 지점 B에 도달해야 합니다.
+
+이동: 상하좌우로만 이동할 수 있으며, 대각선으로는 이동할 수 없습니다. 한 번에 한 칸씩만 이동 가능합니다.
+
+경계: 미로의 바깥쪽 테두리는 모두 벽으로 막혀 있어 통과할 수 없습니다.
+
+시작/도착 지점: A에서 시작하여 B로 이동해야 합니다.
+
+목표: A에서 B까지의 최단 경로를 찾아 그 경로의 길이를 반환합니다.
+
+제약 사항:
+
+10 <= n == 높이 == 너비 <= 10^3
+Input specification
+
+A maze, a 2D grid of strings.
+
+maze: 2차원 문자열 그리드
+
+Output specification
+
+The length of the shortest path from A to B.
+
+A에서 B까지의 최단 경로의 길이
